@@ -10,6 +10,8 @@ resource "aws_vpc" "hashicat" {
   tags = {
     name = "${var.prefix}-vpc-${var.region}"
     environment = "Production"
+    Department = "My Department"
+    Billable = "Yes"
   }
 }
 
@@ -19,6 +21,8 @@ resource "aws_subnet" "hashicat" {
 
   tags = {
     name = "${var.prefix}-subnet"
+    Department = "My Department"
+    Billable = "Yes"
   }
 }
 
@@ -58,6 +62,8 @@ resource "aws_security_group" "hashicat" {
 
   tags = {
     Name = "${var.prefix}-security-group"
+    Department = "My Department"
+    Billable = "Yes"
   }
 }
 
@@ -71,6 +77,8 @@ resource "aws_internet_gateway" "hashicat" {
 
   tags = {
     Name = "${var.prefix}-internet-gateway"
+    Department = "My Department"
+    Billable = "Yes"
   }
 }
 
@@ -125,6 +133,8 @@ resource "aws_instance" "hashicat" {
 
   tags = {
     Name = "${var.prefix}-hashicat-instance"
+    Department = "My Department"
+    Billable = "Yes"
   }
 }
 
